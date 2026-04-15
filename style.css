@@ -516,3 +516,124 @@ footer {
     display: none; /* In a real scenario, you'd add a hamburger menu toggle here */
   }
 }
+
+/* Layout del Caso de Estudio */
+.case-study-page {
+  padding-top: 80px;
+}
+
+.project-hero {
+  text-align: center;
+  padding: 60px 0;
+  background: var(--bg-alt);
+}
+
+.project-hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+.project-hero h2 { font-size: 1.5rem; color: var(--text-secondary); font-weight: 400; max-width: 700px; margin: 0 auto 40px; }
+
+/* Navegación pegajosa */
+.project-nav {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 100;
+  padding: 15px 0;
+}
+
+.project-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.project-nav a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Efecto interactivo Wireframe/UI */
+.before-after-card {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.before-after-card img { width: 100%; display: block; }
+.before-after-card .top-img { transition: opacity 0.4s ease; }
+.before-after-card:hover .top-img { opacity: 0; } /* Al pasar el mouse desaparece la UI y queda el wireframe */
+
+.label-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* Estilos para el Caso de Estudio */
+.case-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: center; }
+.case-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.bg-alt { background-color: var(--bg-alt); padding: 80px 0; }
+.rounded { border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+/* Comparador Wireframe/UI */
+.comparison-container { margin: 50px auto; max-width: 900px; position: relative; cursor: crosshair; }
+.comparison-card { position: relative; border-radius: 12px; overflow: hidden; }
+.img-top { position: relative; z-index: 2; transition: opacity 0.5s ease; width: 100%; }
+.comparison-card:hover .img-top { opacity: 0; } /* Oculta la UI final */
+.img-bottom { position: absolute; top: 0; left: 0; width: 100%; z-index: 1; }
+.hover-hint { position: absolute; bottom: 20px; right: 20px; z-index: 3; background: rgba(0,0,0,0.6); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .case-grid, .case-grid-3 { grid-template-columns: 1fr; }
+  .project-hero h1 { font-size: 2.2rem; }
+}
+
+.demo-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Esto evita que la imagen se estire si tiene proporciones distintas */
+  padding: 20px;       /* Le da aire al componente para que no toque los bordes */
+}
+
+.case-visual img {
+    transition: opacity 0.3s ease;
+}
+/* Opcional: que la imagen se aclare un poco cuando no se está interactuando */
+.case-visual:hover img {
+    border-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .case-text {
+    position: relative !important; /* Desactiva el sticky en móviles */
+    top: 0 !important;
+    margin-bottom: var(--space-lg);
+  }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: 80px; /* Esto separará los proyectos del footer */
+}
+
+/* También es buena práctica que el main tenga un padding inferior */
+main {
+    padding-bottom: 60px;
+}
+

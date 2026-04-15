@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jardín Mate-mágico | Hardware Integration</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+      <a href="category-prototyping.html" class="logo">← Hardware & Tech</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#goal">Goal</a></li>
+          <li><a href="#system">System</a></li>
+          <li><a href="#outcome">Outcome</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="project-hero" style="padding-top: 140px; background-color: #f8f9fa; background-image: radial-gradient(#d1d1d1 1px, transparent 1px); background-size: 20px 20px;">
+    <div class="container">
+      <span class="category-tag">Embedded Systems • Arduino</span>
+      <h1 class="title">Jardín Mate-mágico</h1>
+      <h2 style="font-size: 1.5rem; color: var(--text-secondary); font-weight: 400; max-width: 700px; margin: 0 auto 40px;">
+        An interactive learning toy powered by hardware and embedded systems.
+      </h2>
+      
+      <div class="hero-media">
+        <img src="assets/images/jardin-final-product.jpg" alt="Jardín Mate-mágico Final Product" class="rounded shadow-lg" style="width: 100%; max-width: 900px; border: 8px solid white;">
+        <p style="margin-top: 15px; font-size: 0.85rem; color: var(--text-secondary); font-style: italic;">Final functional prototype: Integrating physical design with electronic responsiveness.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="context" class="section-content">
+    <div class="container case-grid">
+      <div class="case-text">
+        <h3 class="section-title">Context</h3>
+        <p>Jardín Mate-mágico was developed to make learning engaging through physical interaction. This case study focuses on the <strong>technical and prototyping aspects</strong>, highlighting how hardware and electronics were integrated to create a functional system.</p>
+        
+        <h3 class="section-title" style="margin-top: 40px;">The Challenge</h3>
+<p>
+  The core challenge was translating <strong>abstract mathematical concepts</strong> into a literal, physical language for children with ASD Level 1. 
+</p>
+<p style="margin-top: 15px;">
+  We had to engineer a "Sensory Bridge": a system stimulating enough to prevent disengagement, yet strictly controlled in its auditory and visual outputs to avoid the sensory overload often triggered by traditional educational tools.
+</p>
+      </div>
+      <div class="case-visual">
+        <img src="assets/images/jardin-circuitry.gif" alt="Early Circuit Prototyping" class="rounded" style="width: 100%; filter: grayscale(20%);">
+      </div>
+    </div>
+  </section>
+
+  <section id="goal" class="section-content bg-alt">
+    <div class="container case-grid" style="align-items: start;">
+      <div class="case-text" style="position: sticky; top: 120px;">
+        <h3 class="section-title">The Goal & My Role</h3>
+        <p>The objective was to develop a cohesive interactive system where hardware and software components enabled responsive user interactions.</p>
+        <ul style="margin-top: 20px; line-height: 1.8; color: var(--text-secondary); margin-left: 80 px;">
+            <li> Designing and assembling electronic system.</li>
+            <li> Integrating lights, button, speaker, Bluetooth, and microcontroller (Arduino Nano).</li>
+            <li> 3D modeling for internal hardware housing.</li>
+        </ul>
+      </div>
+      <div class="case-visual">
+        <img src="assets/images/jardin-components-layout.png" alt="Hardware Components" class="rounded" style="width: 100%;">
+      </div>
+    </div>
+  </section>
+
+  <section id="system" class="section-content">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 60px;">
+        <h3 class="section-title">Hybrid Interaction Model</h3>
+        <p>Jardín Mate-mágico operates as a <strong>Phygital Ecosystem</strong>. It’s a collaborative experience where physical play and digital supervision merge to provide real-time reinforcement for the child.</p>
+      </div>
+
+      <div style="background: #1a1a1a; padding: 40px; border-radius: 24px; margin-bottom: 80px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+        <div style="display: flex; flex-direction: column; gap: 25px;">
+            
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+                <div style="flex: 1; background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                    <h4 style="color: #fff; margin-bottom: 10px; font-size: 1rem;">1. Physical Setup</h4>
+                    <p style="color: #aaa; font-size: 0.85rem;">Child assembles the toy components manually.</p>
+                </div>
+                <div style="color: var(--accent); font-weight: bold;">→</div>
+                <div style="flex: 1; background: rgba(var(--accent-rgb), 0.1); padding: 25px; border-radius: 15px; border: 1px solid var(--accent); text-align: center;">
+                    <h4 style="color: #fff; margin-bottom: 10px; font-size: 1rem;">2. Digital Validation</h4>
+                    <p style="color: #aaa; font-size: 0.85rem;">Tutor confirms assembly & selects recipe via App (Bluetooth).</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; color: var(--accent); font-size: 1.2rem; margin: -10px 0;">↓</div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+                <div style="flex: 1; background: rgba(var(--accent-rgb), 0.1); padding: 25px; border-radius: 15px; border: 1px solid var(--accent); text-align: center;">
+                    <h4 style="color: #fff; margin-bottom: 10px; font-size: 1rem;">3. Guided Play</h4>
+                    <p style="color: #aaa; font-size: 0.85rem;">Child solves math challenges in the physical space.</p>
+                </div>
+                <div style="color: var(--accent); font-weight: bold;">←</div>
+                <div style="flex: 1; background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                    <h4 style="color: #fff; margin-bottom: 10px; font-size: 1rem;">4. Feedback & Reward</h4>
+                    <p style="color: #aaa; font-size: 0.85rem;">Tutor validates via App; System triggers visual/sound rewards.</p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="case-grid" style="align-items: center;">
+        <div class="case-visual">
+            <img src="assets/images/jardin-connections.png" alt="Wiring and Connections" class="rounded" style="width: 100%; border: 1px solid var(--border-color);">
+        </div>
+        <div class="case-text">
+            <h3 class="section-title">Hardware Integration</h3>
+            <p>To support this hybrid flow, I developed a <strong>microcontroller-based architecture</strong> using Arduino. This ensured stable Bluetooth communication between the mobile app and the toy, as well as low-latency responses for the capacitive sensors and visual feedback system.</p>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-secondary);">
+                This technical foundation was key to maintaining the "Sensory Safety" required for neurodiverse users.
+            </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+  <section id="outcome" class="section-content bg-alt" style="text-align: center;">
+    <div class="container">
+      <h3 class="section-title">Outcome</h3>
+      <p style="max-width: 700px; margin: 0 auto 40px;">A functional interactive prototype capable of responding to user input through a precise combination of physical and digital interactions.</p>
+      <div class="outcome-video-placeholder" style="background: #000; padding: 50px; border-radius: 15px; color: white;">
+        <img src="assets/images/jardin-interaction.jpg" alt="Interaction Demo" style="max-width: 100%; margin-top: 20px; border-radius: 8px;">
+      </div>
+    </div>
+  </section>
+
+  <section class="section-content container">
+    <div class="reflection-box" style="border-left: 5px solid var(--accent); padding-left: 30px;">
+        <h3 class="section-title">Reflection</h3>
+        <p>Working with hardware introduced challenges like reliability and physical constraints. It reinforced the importance of designing complete systems, not just interfaces. If I were to iterate, I would explore modularity to make the system easier to scale and maintain.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p class="footer-note">© 2026 Eduardo Mosquera. Hardware & Prototyping Project.</p>
+    </div>
+  </footer>
+
+  <style>
+    .tech-stack-grid {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: #1a1a1a;
+        padding: 40px;
+        border-radius: 15px;
+        color: white;
+    }
+    .tech-card {
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #444;
+        border-radius: 10px;
+        min-width: 180px;
+    }
+    .tech-card.highlight {
+        border-color: var(--accent);
+        background: rgba(255, 255, 255, 0.05);
+    }
+    .tech-card h4 {
+        color: var(--accent);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+    .tech-arrow {
+        font-size: 2rem;
+        color: #444;
+    }
+    @media (max-width: 768px) {
+        .tech-stack-grid {
+            flex-direction: column;
+            gap: 20px;
+        }
+        .tech-arrow {
+            transform: rotate(90deg);
+        }
+    }
+    .tech-stack-grid {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: #1a1a1a; /* Fondo oscuro */
+        padding: 40px;
+        border-radius: 15px;
+        color: white; /* Esto hará que los <p> sean blancos */
+        margin-top: 30px;
+    }
+
+    .tech-card h4 {
+        color: var(--accent); /* El título (Input, etc) resaltará con tu color de marca */
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    .tech-card h4 {
+        color: #ffffff; /* Aseguramos que el texto descriptivo sea blanco puro */
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .tech-arrow {
+        font-size: 2rem;
+        color: #666; /* Un gris medio para que las flechas se vean pero no distraigan */
+    }
+  </style>
+
+</body>
+</html>
